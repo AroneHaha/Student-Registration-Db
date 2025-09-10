@@ -53,6 +53,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.ContactNoLbl = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.SubmitBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +61,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.SubmitBtn);
             this.panel1.Controls.Add(this.ContactNoLbl);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.AddressLbl);
@@ -85,7 +87,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(28, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 482);
+            this.panel1.Size = new System.Drawing.Size(500, 556);
             this.panel1.TabIndex = 0;
             // 
             // label3
@@ -340,12 +342,25 @@
             this.label15.TabIndex = 45;
             this.label15.Text = "Contact no.";
             // 
+            // SubmitBtn
+            // 
+            this.SubmitBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.SubmitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.SubmitBtn.ForeColor = System.Drawing.Color.White;
+            this.SubmitBtn.Location = new System.Drawing.Point(176, 493);
+            this.SubmitBtn.Name = "SubmitBtn";
+            this.SubmitBtn.Size = new System.Drawing.Size(143, 43);
+            this.SubmitBtn.TabIndex = 47;
+            this.SubmitBtn.Text = "Submit";
+            this.SubmitBtn.UseVisualStyleBackColor = false;
+            this.SubmitBtn.Click += new System.EventHandler(this.SubmitBtn_Click);
+            // 
             // frmConfirmation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(568, 530);
+            this.ClientSize = new System.Drawing.Size(568, 603);
             this.Controls.Add(this.panel1);
             this.Name = "frmConfirmation";
             this.Text = "frmConfirmation";
@@ -383,5 +398,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label AddressLbl;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button SubmitBtn;
     }
 }

@@ -123,12 +123,13 @@
             this.RegisterBtn.BackColor = System.Drawing.Color.CornflowerBlue;
             this.RegisterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.RegisterBtn.ForeColor = System.Drawing.Color.White;
-            this.RegisterBtn.Location = new System.Drawing.Point(254, 432);
+            this.RegisterBtn.Location = new System.Drawing.Point(254, 433);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(143, 43);
             this.RegisterBtn.TabIndex = 22;
             this.RegisterBtn.Text = "Register";
             this.RegisterBtn.UseVisualStyleBackColor = false;
+            this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click);
             // 
             // AddressTxt
             // 
@@ -299,11 +300,11 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(327, 76);
+            this.label2.Location = new System.Drawing.Point(274, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 17);
+            this.label2.Size = new System.Drawing.Size(279, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Create Student\'s Profile";
+            this.label2.Text = "Create Student\'s Profile for IT Organization";
             // 
             // label1
             // 

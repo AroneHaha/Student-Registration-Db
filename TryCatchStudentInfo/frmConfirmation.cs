@@ -12,14 +12,21 @@ namespace TryCatchStudentInfo
 {
     public partial class frmConfirmation : Form
     {
-        public frmConfirmation()
+        private StudentInformationClass info;
+        public frmConfirmation(StudentInformationClass studentInfo)
         {
             InitializeComponent();
+            info = studentInfo;
         }
 
         private void frmConfirmation_Load(object sender, EventArgs e)
         {
-            
+            StudentNoLbl.Text = info.SetStudentNo.ToString();
+        }
+
+        private void SubmitBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

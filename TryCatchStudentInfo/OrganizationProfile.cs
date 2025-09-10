@@ -80,7 +80,21 @@ namespace TryCatchStudentInfo
             return _Age;
         }
 
+        private void RegisterBtn_Click(object sender, EventArgs e)
+        {
+            
+            StudentInformationClass studentinfo = new StudentInformationClass();
+            frmConfirmation confirmationform = new frmConfirmation(studentinfo);
 
+            studentinfo.SetFullName = FullName(LastNameTxt.Text, FirstNameTxt.Text, MiddleInitialTxt.Text);
+            studentinfo.SetStudentNo = (int)StudentNumber(StudentNoTxt.Text);
+            studentinfo.SetProgram = ProgramCmb.Text;
+            studentinfo.SetGender = GenderCmb.Text;
+            studentinfo.SetContactNo = (int)ContactNo(ContactNoTxt.Text);
+            studentinfo.SetAge = Age(AgeTxt.Text);
+            studentinfo.SetBirthday = BirthDatePicker.Text;
 
+            confirmationform.Show();
+        }
     }
 }
