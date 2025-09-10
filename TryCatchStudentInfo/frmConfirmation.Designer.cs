@@ -311,7 +311,7 @@
             this.ClientSize = new System.Drawing.Size(505, 575);
             this.Controls.Add(this.panel1);
             this.Name = "frmConfirmation";
-            this.Text = "frmConfirmation";
+            this.Text = "Confirmation";
             this.Load += new System.EventHandler(this.frmConfirmation_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

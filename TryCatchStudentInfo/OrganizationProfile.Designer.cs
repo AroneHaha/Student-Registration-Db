@@ -206,7 +206,7 @@
             // 
             // MiddleInitialTxt
             // 
-            this.MiddleInitialTxt.Location = new System.Drawing.Point(532, 247);
+            this.MiddleInitialTxt.Location = new System.Drawing.Point(533, 232);
             this.MiddleInitialTxt.Name = "MiddleInitialTxt";
             this.MiddleInitialTxt.Size = new System.Drawing.Size(59, 20);
             this.MiddleInitialTxt.TabIndex = 12;
@@ -245,7 +245,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label7.Location = new System.Drawing.Point(528, 220);
+            this.label7.Location = new System.Drawing.Point(529, 205);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 24);
             this.label7.TabIndex = 7;

@@ -29,9 +29,6 @@ namespace TryCatchStudentInfo
             AddressLbl.Text = info.SetAddress;
             BirthDateLbl.Text = info.SetBirthday;
             AgeLbl.Text = info.SetAge.ToString();
-
-
-
         }
 
         private void SubmitBtn_Click(object sender, EventArgs e)
