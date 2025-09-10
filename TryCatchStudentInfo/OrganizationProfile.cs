@@ -93,6 +93,7 @@ namespace TryCatchStudentInfo
             studentinfo.SetContactNo = (int)ContactNo(ContactNoTxt.Text);
             studentinfo.SetAge = Age(AgeTxt.Text);
             studentinfo.SetBirthday = BirthDatePicker.Text;
+            studentinfo.SetAddress = AddressTxt.Text;
 
             confirmationform.Show();
         }
