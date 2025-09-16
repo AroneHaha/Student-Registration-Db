@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Client.cs" />
-    <Compile Include="Repositories\ClientRepository.cs" />
+    <Compile Include="Models\Students.cs" />
+    <Compile Include="Repositories\StudentRepository.cs" />
     <Compile Include="ViewStudents.cs">
       <SubType>Form</SubType>
     </Compile>

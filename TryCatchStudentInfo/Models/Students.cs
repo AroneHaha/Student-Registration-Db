@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TryCatchStudentInfo.Models
 {
-    public class Client
+    public class Students
     {
         public int StudentId;
         public string FirstName = "";
