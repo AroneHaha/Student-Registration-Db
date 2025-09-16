@@ -142,12 +142,29 @@ namespace TryCatchStudentInfo
             return _Age;
         }
 
+        private int StudentIdHolder = 0; 
+
+        public void EditStudent(Students student)
+        {
+            this.StudentIdHolder = student.StudentId; 
+            this.StudentNoTxt.Text = student.StudentId.ToString();
+            this.FirstNameTxt.Text = student.FirstName;
+            this.LastNameTxt.Text = student.LastName;
+            this.MiddleInitialTxt.Text = student.MiddleInitial;
+            this.ProgramCmb.Text = student.Program;
+            this.BirthDatePicker.Value = student.BirthDate;
+            this.AgeTxt.Text = student.Age.ToString();
+            this.GenderCmb.Text = student.Gender;
+            this.AddressTxt.Text = student.Address;
+            this.ContactNoTxt.Text = student.ContactNum;
+        }
+
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 Students student = new Students();
-                student.StudentId = int.Parse(StudentNoTxt.Text);
+                student.StudentId = int.Parse(StudentNoTxt.Text); 
                 student.FirstName = FirstNameTxt.Text;
                 student.LastName = LastNameTxt.Text;
                 student.MiddleInitial = MiddleInitialTxt.Text;
@@ -159,16 +176,24 @@ namespace TryCatchStudentInfo
                 student.ContactNum = ContactNo(ContactNoTxt.Text).ToString();
 
                 var repo = new StudentRepository();
-                repo.CreateStudent(student);
+
+                if (StudentIdHolder == 0)
+                {
+                    repo.CreateStudent(student);
+                }
+                else
+                {
+                    repo.UpdateStudents(StudentIdHolder, student);
+                }
 
                 this.DialogResult = DialogResult.OK;
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred during registration: " + ex.Message);
             }
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {

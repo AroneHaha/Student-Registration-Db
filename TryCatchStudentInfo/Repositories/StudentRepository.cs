@@ -132,18 +132,22 @@ namespace TryCatchStudentInfo.Repositories
             }
         }
 
-        public void UpdateStudents(Students student)
+        public void UpdateStudents(int oldStudentId, Students student)
         {
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "UPDATE Students SET FirstName=@FirstName, LastName=@LastName, MiddleInitial=@MiddleInitial, Program=@Program, BirthDate=@BirthDate, Age=@Age, Gender=@Gender, Address=@Address, ContactNum=@ContactNum WHERE StudentId=@StudentId";
+
+                    string query = "UPDATE Students SET StudentId=@NewStudentId, FirstName=@FirstName, LastName=@LastName, MiddleInitial=@MiddleInitial, Program=@Program, BirthDate=@BirthDate, Age=@Age, Gender=@Gender, Address=@Address, ContactNum=@ContactNum WHERE StudentId=@OldStudentId";
+
+                    // update the current id using the input and store the old id into StudentIdHolder
+                    // storing old id will allow the system to determine which row/id yung tinatawag
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@StudentId", student.StudentId);
+                        command.Parameters.AddWithValue("@NewStudentId", student.StudentId);
                         command.Parameters.AddWithValue("@FirstName", student.FirstName);
                         command.Parameters.AddWithValue("@LastName", student.LastName);
                         command.Parameters.AddWithValue("@MiddleInitial", student.MiddleInitial);
@@ -153,6 +157,7 @@ namespace TryCatchStudentInfo.Repositories
                         command.Parameters.AddWithValue("@Gender", student.Gender);
                         command.Parameters.AddWithValue("@Address", student.Address);
                         command.Parameters.AddWithValue("@ContactNum", student.ContactNum);
+                        command.Parameters.AddWithValue("@OldStudentId", oldStudentId);
 
                         command.ExecuteNonQuery();
                     }
@@ -163,6 +168,7 @@ namespace TryCatchStudentInfo.Repositories
                 Console.WriteLine("Exception: " + ex.ToString());
             }
         }
+
 
         public void DeleteStudent(int StudentId)
         {

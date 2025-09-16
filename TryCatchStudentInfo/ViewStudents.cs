@@ -13,7 +13,7 @@ namespace TryCatchStudentInfo
 {
     public partial class ViewStudents : Form
     {
-        
+
         public ViewStudents()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace TryCatchStudentInfo
 
         private void frmConfirmation_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void SubmitBtn_Click(object sender, EventArgs e)
@@ -86,7 +86,42 @@ namespace TryCatchStudentInfo
             {
                 ReadStudents();
             }
-            
+
         }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            if (this.DataGrid.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a student to edit.");
+                return;
+            }
+
+            string value = this.DataGrid.SelectedRows[0].Cells[0].Value?.ToString();
+            if (string.IsNullOrEmpty(value))
+            {
+                MessageBox.Show("Invalid student ID.");
+                return;
+            }
+
+            int studentId = int.Parse(value);
+            var repo = new StudentRepository();
+            var student = repo.GetStudent(studentId);
+
+            if (student == null)
+            {
+                MessageBox.Show("Student not found.");
+                return;
+            }
+
+            ManageStudentForm editForm = new ManageStudentForm();
+            editForm.EditStudent(student);
+
+            if (editForm.ShowDialog() == DialogResult.OK)
+            {
+                ReadStudents();
+            }
+        }
+
     }
 }
