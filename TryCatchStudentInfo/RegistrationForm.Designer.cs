@@ -1,6 +1,6 @@
 ﻿namespace TryCatchStudentInfo
 {
-    partial class OrganizationProfile
+    partial class RegistrationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrganizationProfile));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ContactNoTxt = new System.Windows.Forms.TextBox();
@@ -85,9 +85,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(30, 22);
+            this.panel1.Location = new System.Drawing.Point(12, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(650, 498);
+            this.panel1.Size = new System.Drawing.Size(651, 500);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -123,7 +123,7 @@
             this.RegisterBtn.BackColor = System.Drawing.Color.CornflowerBlue;
             this.RegisterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.RegisterBtn.ForeColor = System.Drawing.Color.White;
-            this.RegisterBtn.Location = new System.Drawing.Point(254, 433);
+            this.RegisterBtn.Location = new System.Drawing.Point(254, 438);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(143, 43);
             this.RegisterBtn.TabIndex = 22;
@@ -317,14 +317,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Student Registration Form";
             // 
-            // OrganizationProfile
+            // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(710, 547);
+            this.ClientSize = new System.Drawing.Size(676, 527);
             this.Controls.Add(this.panel1);
-            this.Name = "OrganizationProfile";
+            this.Name = "RegistrationForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.OrganizationProfile_Load);
             this.panel1.ResumeLayout(false);

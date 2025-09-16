@@ -12,14 +12,14 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TryCatchStudentInfo
 {
-    public partial class OrganizationProfile : Form
+    public partial class RegistrationForm : Form
     {
         private long _StudentNo;
         private int _Age;
         private long _ContactNo;
         private string _FullName;
 
-        public OrganizationProfile()
+        public RegistrationForm()
         {
             InitializeComponent();
         }
@@ -145,7 +145,7 @@ namespace TryCatchStudentInfo
             try
             {
                 StudentInformationClass studentinfo = new StudentInformationClass();
-                frmConfirmation confirmationform = new frmConfirmation(studentinfo);
+                ViewStudents confirmationform = new ViewStudents(studentinfo);
 
                 studentinfo.SetFullName = FullName(LastNameTxt.Text, FirstNameTxt.Text, MiddleInitialTxt.Text);
                 studentinfo.SetStudentNo = (int)StudentNumber(StudentNoTxt.Text);

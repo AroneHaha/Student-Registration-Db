@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace TryCatchStudentInfo
 {
-    public partial class frmConfirmation : Form
+    public partial class ViewStudents : Form
     {
         private StudentInformationClass info;
-        public frmConfirmation(StudentInformationClass studentInfo)
+        public ViewStudents(StudentInformationClass studentInfo)
         {
             InitializeComponent();
             info = studentInfo;

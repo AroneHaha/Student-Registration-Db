@@ -16,7 +16,7 @@ namespace TryCatchStudentInfo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OrganizationProfile());
+            Application.Run(new RegistrationForm());
         }
     }
 }
