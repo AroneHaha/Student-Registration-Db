@@ -21,14 +21,7 @@ namespace TryCatchStudentInfo
 
         private void frmConfirmation_Load(object sender, EventArgs e)
         {
-            StudentNoLbl.Text = info.SetStudentNo.ToString();
-            ProgramLbl.Text = info.SetProgram;
-            FullNameLbl.Text = info.SetFullName;
-            ContactNoLbl.Text = info.SetContactNo.ToString();
-            GenderLbl.Text = info.SetGender;
-            AddressLbl.Text = info.SetAddress;
-            BirthDateLbl.Text = info.SetBirthday;
-            AgeLbl.Text = info.SetAge.ToString();
+
         }
 
         private void SubmitBtn_Click(object sender, EventArgs e)
