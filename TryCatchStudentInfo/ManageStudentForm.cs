@@ -8,18 +8,20 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TryCatchStudentInfo.Models;
+using TryCatchStudentInfo.Repositories;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TryCatchStudentInfo
 {
-    public partial class RegistrationForm : Form
+    public partial class ManageStudentForm : Form
     {
         private long _StudentNo;
         private int _Age;
         private long _ContactNo;
         private string _FullName;
 
-        public RegistrationForm()
+        public ManageStudentForm()
         {
             InitializeComponent();
         }
@@ -144,24 +146,33 @@ namespace TryCatchStudentInfo
         {
             try
             {
-                StudentInformationClass studentinfo = new StudentInformationClass();
-                ViewStudents confirmationform = new ViewStudents(studentinfo);
+                Students student = new Students();
+                student.StudentId = int.Parse(StudentNoTxt.Text);
+                student.FirstName = FirstNameTxt.Text;
+                student.LastName = LastNameTxt.Text;
+                student.MiddleInitial = MiddleInitialTxt.Text;
+                student.Program = ProgramCmb.Text;
+                student.BirthDate = BirthDatePicker.Value;
+                student.Age = Age(AgeTxt.Text);
+                student.Gender = GenderCmb.Text;
+                student.Address = AddressTxt.Text;
+                student.ContactNum = ContactNo(ContactNoTxt.Text).ToString();
 
-                studentinfo.SetFullName = FullName(LastNameTxt.Text, FirstNameTxt.Text, MiddleInitialTxt.Text);
-                studentinfo.SetStudentNo = (int)StudentNumber(StudentNoTxt.Text);
-                studentinfo.SetProgram = ProgramCmb.Text;
-                studentinfo.SetGender = GenderCmb.Text;
-                studentinfo.SetContactNo = (int)ContactNo(ContactNoTxt.Text);
-                studentinfo.SetAge = Age(AgeTxt.Text);
-                studentinfo.SetBirthday = BirthDatePicker.Text;
-                studentinfo.SetAddress = AddressTxt.Text;
+                var repo = new StudentRepository();
+                repo.CreateStudent(student);
 
-                confirmationform.Show();
+                this.DialogResult = DialogResult.OK;
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred during registration: " + ex.Message);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }

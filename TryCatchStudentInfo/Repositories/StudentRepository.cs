@@ -37,7 +37,7 @@ namespace TryCatchStudentInfo.Repositories
                                 student.LastName = reader.GetString(2);
                                 student.MiddleInitial = reader.GetString(3);
                                 student.Program = reader.GetString(4);
-                                student.BirthDate = reader.GetDateTime(5).ToString("yyyy-MM-dd");
+                                student.BirthDate = reader.GetDateTime(5);
                                 student.Age = reader.GetInt32(6);
                                 student.Gender = reader.GetString(7);
                                 student.Address = reader.GetString(8);
@@ -78,7 +78,7 @@ namespace TryCatchStudentInfo.Repositories
                                 student.LastName = reader.GetString(2);
                                 student.MiddleInitial = reader.GetString(3);
                                 student.Program = reader.GetString(4);
-                                student.BirthDate = reader.GetDateTime(5).ToString("yyyy-MM-dd");
+                                student.BirthDate = reader.GetDateTime(5);
                                 student.Age = reader.GetInt32(6);
                                 student.Gender = reader.GetString(7);
                                 student.Address = reader.GetString(8);
@@ -105,17 +105,18 @@ namespace TryCatchStudentInfo.Repositories
                 {
                     connection.Open();
 
-                    string query = @"INSERT INTO Students (FirstName, LastName, MiddleInitial, Program, BirthDate, Age, Gender, Address, ContactNum) 
+                    string query = @"INSERT INTO Students (StudentId, FirstName, LastName, MiddleInitial, Program, BirthDate, Age, Gender, Address, ContactNum) 
                                 VALUES 
-                                (@FirstName, @LastName, @MiddleInitial, @Program, @BirthDate, @Age, @Gender, @Address, @ContactNum)";
+                                (@StudentId, @FirstName, @LastName, @MiddleInitial, @Program, @BirthDate, @Age, @Gender, @Address, @ContactNum)";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
+                        command.Parameters.AddWithValue("@StudentId", student.StudentId);
                         command.Parameters.AddWithValue("@FirstName", student.FirstName);
                         command.Parameters.AddWithValue("@LastName", student.LastName);
                         command.Parameters.AddWithValue("@MiddleInitial", student.MiddleInitial);
                         command.Parameters.AddWithValue("@Program", student.Program);
-                        command.Parameters.AddWithValue("@BirthDate", student.BirthDate); 
+                        command.Parameters.AddWithValue("@BirthDate", student.BirthDate);
                         command.Parameters.AddWithValue("@Age", student.Age);
                         command.Parameters.AddWithValue("@Gender", student.Gender);
                         command.Parameters.AddWithValue("@Address", student.Address);

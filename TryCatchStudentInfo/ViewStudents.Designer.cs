@@ -103,6 +103,7 @@
             this.AddStudentBtn.TabIndex = 29;
             this.AddStudentBtn.Text = "Add Student";
             this.AddStudentBtn.UseVisualStyleBackColor = false;
+            this.AddStudentBtn.Click += new System.EventHandler(this.AddStudentBtn_Click);
             // 
             // DeleteBtn
             // 

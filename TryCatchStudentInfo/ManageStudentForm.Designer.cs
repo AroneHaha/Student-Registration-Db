@@ -1,6 +1,6 @@
 ﻿namespace TryCatchStudentInfo
 {
-    partial class RegistrationForm
+    partial class ManageStudentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageStudentForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ContactNoTxt = new System.Windows.Forms.TextBox();
@@ -54,6 +54,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +62,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.ContactNoTxt);
             this.panel1.Controls.Add(this.label12);
@@ -102,7 +104,7 @@
             // 
             // ContactNoTxt
             // 
-            this.ContactNoTxt.Location = new System.Drawing.Point(311, 380);
+            this.ContactNoTxt.Location = new System.Drawing.Point(308, 380);
             this.ContactNoTxt.Name = "ContactNoTxt";
             this.ContactNoTxt.Size = new System.Drawing.Size(219, 20);
             this.ContactNoTxt.TabIndex = 24;
@@ -112,7 +114,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label12.Location = new System.Drawing.Point(307, 353);
+            this.label12.Location = new System.Drawing.Point(304, 353);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(105, 24);
             this.label12.TabIndex = 23;
@@ -123,9 +125,9 @@
             this.RegisterBtn.BackColor = System.Drawing.Color.CornflowerBlue;
             this.RegisterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.RegisterBtn.ForeColor = System.Drawing.Color.White;
-            this.RegisterBtn.Location = new System.Drawing.Point(254, 438);
+            this.RegisterBtn.Location = new System.Drawing.Point(339, 447);
             this.RegisterBtn.Name = "RegisterBtn";
-            this.RegisterBtn.Size = new System.Drawing.Size(143, 43);
+            this.RegisterBtn.Size = new System.Drawing.Size(143, 37);
             this.RegisterBtn.TabIndex = 22;
             this.RegisterBtn.Text = "Register";
             this.RegisterBtn.UseVisualStyleBackColor = false;
@@ -133,7 +135,7 @@
             // 
             // AddressTxt
             // 
-            this.AddressTxt.Location = new System.Drawing.Point(64, 380);
+            this.AddressTxt.Location = new System.Drawing.Point(61, 380);
             this.AddressTxt.Name = "AddressTxt";
             this.AddressTxt.Size = new System.Drawing.Size(219, 20);
             this.AddressTxt.TabIndex = 21;
@@ -143,7 +145,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label11.Location = new System.Drawing.Point(60, 353);
+            this.label11.Location = new System.Drawing.Point(57, 353);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(80, 24);
             this.label11.TabIndex = 20;
@@ -152,7 +154,7 @@
             // GenderCmb
             // 
             this.GenderCmb.FormattingEnabled = true;
-            this.GenderCmb.Location = new System.Drawing.Point(390, 310);
+            this.GenderCmb.Location = new System.Drawing.Point(387, 310);
             this.GenderCmb.Name = "GenderCmb";
             this.GenderCmb.Size = new System.Drawing.Size(202, 21);
             this.GenderCmb.TabIndex = 18;
@@ -162,7 +164,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label10.Location = new System.Drawing.Point(391, 280);
+            this.label10.Location = new System.Drawing.Point(388, 280);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 24);
             this.label10.TabIndex = 17;
@@ -173,7 +175,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label9.Location = new System.Drawing.Point(59, 280);
+            this.label9.Location = new System.Drawing.Point(56, 280);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 24);
             this.label9.TabIndex = 16;
@@ -181,14 +183,14 @@
             // 
             // BirthDatePicker
             // 
-            this.BirthDatePicker.Location = new System.Drawing.Point(63, 307);
+            this.BirthDatePicker.Location = new System.Drawing.Point(60, 307);
             this.BirthDatePicker.Name = "BirthDatePicker";
             this.BirthDatePicker.Size = new System.Drawing.Size(200, 20);
             this.BirthDatePicker.TabIndex = 15;
             // 
             // AgeTxt
             // 
-            this.AgeTxt.Location = new System.Drawing.Point(300, 307);
+            this.AgeTxt.Location = new System.Drawing.Point(297, 307);
             this.AgeTxt.Name = "AgeTxt";
             this.AgeTxt.Size = new System.Drawing.Size(59, 20);
             this.AgeTxt.TabIndex = 14;
@@ -198,7 +200,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label8.Location = new System.Drawing.Point(296, 280);
+            this.label8.Location = new System.Drawing.Point(293, 280);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 24);
             this.label8.TabIndex = 13;
@@ -206,21 +208,21 @@
             // 
             // MiddleInitialTxt
             // 
-            this.MiddleInitialTxt.Location = new System.Drawing.Point(533, 232);
+            this.MiddleInitialTxt.Location = new System.Drawing.Point(530, 232);
             this.MiddleInitialTxt.Name = "MiddleInitialTxt";
             this.MiddleInitialTxt.Size = new System.Drawing.Size(59, 20);
             this.MiddleInitialTxt.TabIndex = 12;
             // 
             // FirstNameTxt
             // 
-            this.FirstNameTxt.Location = new System.Drawing.Point(300, 232);
+            this.FirstNameTxt.Location = new System.Drawing.Point(297, 232);
             this.FirstNameTxt.Name = "FirstNameTxt";
             this.FirstNameTxt.Size = new System.Drawing.Size(219, 20);
             this.FirstNameTxt.TabIndex = 11;
             // 
             // LastNameTxt
             // 
-            this.LastNameTxt.Location = new System.Drawing.Point(63, 232);
+            this.LastNameTxt.Location = new System.Drawing.Point(60, 232);
             this.LastNameTxt.Name = "LastNameTxt";
             this.LastNameTxt.Size = new System.Drawing.Size(219, 20);
             this.LastNameTxt.TabIndex = 10;
@@ -228,14 +230,14 @@
             // ProgramCmb
             // 
             this.ProgramCmb.FormattingEnabled = true;
-            this.ProgramCmb.Location = new System.Drawing.Point(390, 156);
+            this.ProgramCmb.Location = new System.Drawing.Point(387, 156);
             this.ProgramCmb.Name = "ProgramCmb";
             this.ProgramCmb.Size = new System.Drawing.Size(202, 21);
             this.ProgramCmb.TabIndex = 9;
             // 
             // StudentNoTxt
             // 
-            this.StudentNoTxt.Location = new System.Drawing.Point(63, 156);
+            this.StudentNoTxt.Location = new System.Drawing.Point(60, 156);
             this.StudentNoTxt.Name = "StudentNoTxt";
             this.StudentNoTxt.Size = new System.Drawing.Size(202, 20);
             this.StudentNoTxt.TabIndex = 8;
@@ -245,7 +247,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label7.Location = new System.Drawing.Point(529, 205);
+            this.label7.Location = new System.Drawing.Point(526, 205);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 24);
             this.label7.TabIndex = 7;
@@ -256,7 +258,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label6.Location = new System.Drawing.Point(296, 205);
+            this.label6.Location = new System.Drawing.Point(293, 205);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 24);
             this.label6.TabIndex = 6;
@@ -267,7 +269,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label5.Location = new System.Drawing.Point(59, 205);
+            this.label5.Location = new System.Drawing.Point(56, 205);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 24);
             this.label5.TabIndex = 5;
@@ -278,7 +280,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label4.Location = new System.Drawing.Point(391, 128);
+            this.label4.Location = new System.Drawing.Point(388, 128);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 24);
             this.label4.TabIndex = 4;
@@ -289,7 +291,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label3.Location = new System.Drawing.Point(59, 128);
+            this.label3.Location = new System.Drawing.Point(56, 128);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 24);
             this.label3.TabIndex = 3;
@@ -317,14 +319,27 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Student Registration Form";
             // 
-            // RegistrationForm
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightCoral;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(180, 447);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 37);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ManageStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(676, 527);
             this.Controls.Add(this.panel1);
-            this.Name = "RegistrationForm";
+            this.Name = "ManageStudentForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.OrganizationProfile_Load);
             this.panel1.ResumeLayout(false);
@@ -361,6 +376,7 @@
         private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.TextBox AddressTxt;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -9,14 +9,14 @@ namespace TryCatchStudentInfo.Models
     public class Students
     {
         public int StudentId;
-        public string FirstName = "";
-        public string LastName = "";
-        public string MiddleInitial = "";
-        public string Program = "";
-        public string BirthDate = "";
+        public string FirstName;
+        public string LastName;
+        public string MiddleInitial;
+        public string Program;
+        public DateTime BirthDate;
         public int Age;
-        public string Gender = "";
-        public string Address = "";
-        public string ContactNum = "";
+        public string Gender;
+        public string Address;
+        public string ContactNum;
     }
 }

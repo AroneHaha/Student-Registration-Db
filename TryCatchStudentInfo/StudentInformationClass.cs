@@ -16,6 +16,5 @@ namespace TryCatchStudentInfo
         public string SetFullName = "";
         public string SetAddress = "";
         public int SetAge = 0;
-
     }
 }

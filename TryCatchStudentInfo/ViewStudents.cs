@@ -13,7 +13,7 @@ namespace TryCatchStudentInfo
 {
     public partial class ViewStudents : Form
     {
-        private StudentInformationClass info;
+        
         public ViewStudents()
         {
             InitializeComponent();
@@ -67,7 +67,7 @@ namespace TryCatchStudentInfo
                 row["Last Name"] = student.LastName;
                 row["Middle Initial"] = student.MiddleInitial;
                 row["Program"] = student.Program;
-                row["Birth Date"] = student.BirthDate;
+                row["Birth Date"] = student.BirthDate.ToString("yyyy-MM-dd");
                 row["Age"] = student.Age;
                 row["Gender"] = student.Gender;
                 row["Address"] = student.Address;
@@ -76,6 +76,17 @@ namespace TryCatchStudentInfo
                 Table.Rows.Add(row);
             }
             this.DataGrid.DataSource = Table;
+        }
+
+        private void AddStudentBtn_Click(object sender, EventArgs e)
+        {
+            ManageStudentForm RegForm = new ManageStudentForm();
+
+            if (RegForm.ShowDialog() == DialogResult.OK)
+            {
+                ReadStudents();
+            }
+            
         }
     }
 }
