@@ -142,6 +142,14 @@ namespace TryCatchStudentInfo
             return _Age;
         }
 
+        public void SetMode(string mode)
+        {
+            this.Text = "Edit Information"; // changes form title
+            this.label1.Text = "Edit Student Information"; // change your label text (replace MainLabel with actual label name)
+            this.label2.Text = "Edit Student's Profile for IT Organization";
+        }
+
+
         private int StudentIdHolder = 0; 
 
         public void EditStudent(Students student)

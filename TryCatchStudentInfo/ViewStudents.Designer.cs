@@ -37,6 +37,7 @@
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.EditBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
             this.panel1.SuspendLayout();
@@ -84,7 +85,7 @@
             this.DataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGrid.BackgroundColor = System.Drawing.Color.LightGray;
             this.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGrid.Location = new System.Drawing.Point(13, 138);
+            this.DataGrid.Location = new System.Drawing.Point(3, 138);
             this.DataGrid.MultiSelect = false;
             this.DataGrid.Name = "DataGrid";
             this.DataGrid.RowHeadersVisible = false;
@@ -116,6 +117,7 @@
             this.DeleteBtn.TabIndex = 30;
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.UseVisualStyleBackColor = false;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // EditBtn
             // 
@@ -136,6 +138,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.EditBtn);
             this.panel1.Controls.Add(this.DeleteBtn);
             this.panel1.Controls.Add(this.AddStudentBtn);
@@ -147,6 +150,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1048, 665);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkGray;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(694, 105);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 27);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Print";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ViewStudents
             // 
@@ -176,5 +192,6 @@
         private System.Windows.Forms.Button DeleteBtn;
         private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -89,6 +89,8 @@ namespace TryCatchStudentInfo
 
         }
 
+
+
         private void EditBtn_Click(object sender, EventArgs e)
         {
             if (this.DataGrid.SelectedRows.Count == 0)
@@ -117,11 +119,43 @@ namespace TryCatchStudentInfo
             ManageStudentForm editForm = new ManageStudentForm();
             editForm.EditStudent(student);
 
+            editForm.SetMode("Edit Student Information"); 
             if (editForm.ShowDialog() == DialogResult.OK)
             {
                 ReadStudents();
             }
+
         }
 
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            string value = this.DataGrid.SelectedRows[0].Cells[0].Value?.ToString();
+
+            if (string.IsNullOrEmpty(value))
+            {
+                MessageBox.Show("Select a row you need to delete");
+                return;
+            }
+
+            int studentId = int.Parse(value);
+
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this student?", "Confirm Delete", MessageBoxButtons.YesNo);
+
+            if (DialogResult == DialogResult.No)
+            {
+                return;
+            }
+
+            var repo = new StudentRepository();
+            repo.DeleteStudent(studentId);
+             
+            ReadStudents();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PdfExporter printer = new PdfExporter(this.DataGrid, "List of Enrolled Students");
+            printer.Print();
+        }
     }
 }
