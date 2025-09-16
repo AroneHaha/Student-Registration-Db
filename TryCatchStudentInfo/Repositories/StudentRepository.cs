@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using TryCatchStudentInfo.Models;
 
 namespace TryCatchStudentInfo.Repositories
 {
     public class StudentRepository
     {
-        private readonly string connectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=StudentRegistrationDb;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
-        
+        private readonly string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=StudentRegistrationDb;Integrated Security=True;TrustServerCertificate=True";
+
         public List<Students> GetStudents()
         {
             var students = new List<Students>();
@@ -35,7 +37,7 @@ namespace TryCatchStudentInfo.Repositories
                                 student.LastName = reader.GetString(2);
                                 student.MiddleInitial = reader.GetString(3);
                                 student.Program = reader.GetString(4);
-                                student.BirthDate = reader.GetString(5);
+                                student.BirthDate = reader.GetDateTime(5).ToString("yyyy-MM-dd");
                                 student.Age = reader.GetInt32(6);
                                 student.Gender = reader.GetString(7);
                                 student.Address = reader.GetString(8);
@@ -76,7 +78,7 @@ namespace TryCatchStudentInfo.Repositories
                                 student.LastName = reader.GetString(2);
                                 student.MiddleInitial = reader.GetString(3);
                                 student.Program = reader.GetString(4);
-                                student.BirthDate = reader.GetString(5);
+                                student.BirthDate = reader.GetDateTime(5).ToString("yyyy-MM-dd");
                                 student.Age = reader.GetInt32(6);
                                 student.Gender = reader.GetString(7);
                                 student.Address = reader.GetString(8);
@@ -161,7 +163,7 @@ namespace TryCatchStudentInfo.Repositories
             }
         }
 
-        public void DeleteClient(int StudentId)
+        public void DeleteStudent(int StudentId)
         {
             try
             {
