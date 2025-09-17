@@ -144,8 +144,8 @@ namespace TryCatchStudentInfo
 
         public void SetMode(string mode)
         {
-            this.Text = "Edit Information"; // changes form title
-            this.label1.Text = "Edit Student Information"; // change your label text (replace MainLabel with actual label name)
+            this.Text = "Edit Information"; 
+            this.label1.Text = "Edit Student Information"; 
             this.label2.Text = "Edit Student's Profile for IT Organization";
         }
 
